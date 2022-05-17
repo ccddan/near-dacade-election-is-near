@@ -3,7 +3,7 @@ Election-is-near
 
 Election-is-near allows user to create election for various positions and ensure each user can only vote once per every election.
 
-[Live Demo](https://jmario1.github.io/election-is-near)
+[Live Demo](https://election-is-near.surge.sh)
 
 Quick Start
 ===========
