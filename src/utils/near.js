@@ -2,7 +2,7 @@ import environment from "./config";
 import { connect, Contract, keyStores, WalletConnection } from "near-api-js";
 import { formatNearAmount } from "near-api-js/lib/utils/format";
 
-const nearEnv = environment(process.env.NODE_ENV || 'development');
+const nearEnv = environment('development');
 
 export async function initContract() {
   const near = await connect(

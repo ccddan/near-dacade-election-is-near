@@ -7,8 +7,8 @@ import Cover from "./components/Cover";
 import coverImg from "./assets/img/election.jpg";
 import "./App.css";
 import Elections from "./components/Elections";
-import ViewElection from "./components/ViewElection";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
+
+
 
 export default function App() {
   const account = window.walletConnection.account();
@@ -25,13 +25,8 @@ export default function App() {
 
     return (
     <>
-      <Router>
-        <Notification />
-        <Routes>
-          <Route path="election/:id" element={<ViewElection />} /> 
-          <Route path="/"
-          element={
-            account.accountId ? (
+   
+      {account.accountId ? (
               <Container fluid="md">
                 <Nav className="justify-content-end pt-3 pb-5">
                   <Nav.Item>
@@ -46,10 +41,8 @@ export default function App() {
                 <Elections />
               </Container>
             ) : (
-              <Cover name="Credible Elections" login={login} coverImg={coverImg} />
-            )} />
-        </Routes>
-      </Router>
+              <Cover name="Election-is-near" login={login} coverImg={coverImg} />
+            )} 
     </>
   );
 };
